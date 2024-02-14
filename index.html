@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link a href="secilensehir.html"
+    rel="stylesheet"
+    />
+    <title>Hava Durumu </title>                     
+    <link rel="stylesheet" href="style.css">                <!-- css ile bağlantı  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- iconları aldığım site -->
+</head>
+<body background="resimler/yy.jpg">
+  <div class="anasayfa">
+      <header><i class="bx bx-left-arrow-alt" ></i> Hava Durumu</header>  
+      <section class="input-part">
+        <p class="info-txt" > Lütfen şehir İsmi Giriniz</p>
+        <input type="text" placeholder="şehir" spellcheck="false">
+        <div class="bölen" ></div>
+        <button> Konuma Göre Bul </button> 
+      </section>
+      <!-- ikinci kısım -->
+      <section class="weather-part">
+        <img src="resimler/png-transparent-weather-forecasting-climate-weather-map-world-weather-map-infographic-text-cloud.png" alt="Hoşgeldiniz.." > <!-- sayfa açıldığında ilk çıkacak resim -->
+      <div class="temp">
+        <span class="sayi">_</span>
+        <span class="drc">°</span>C
+    </div>
+    <div class="hava"> _ _</div>
+    <div class="Konum">
+         <i class="bx bx-map"></i>
+         <span>_,_</span>
+    </div>
+   <div class="button-details"> 
+      <div class="column hissedilen">
+        <i class="bx bxs-thermometer"></i> <!-- yukarıda belirttiğim gibi çeşitli iconlar için -->
+        <div class="details">
+          <div class="temp">
+            <span class="sayi-2">_</span>
+            <span class="drc">°</span>C
+          </div>
+          <p>Hissedilen Sıcaklık</p>
+        </div>
+   </div>
+   <div class ="column nem">
+     <i class="bx bxs-droplet-half"></i>
+      <div class="details">
+       <span>_</span>
+       <p>Nem</p>
+      </div>
+     </div>
+   </div>
+ </section>
+</div>
+<script src="script.js"> </script> <!-- bağlantı -->
+</body>
+</html>
