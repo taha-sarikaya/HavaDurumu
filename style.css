@@ -1,161 +1,170 @@
 *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, Helvetica, sans-serif;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    }
+    
+    .anasayfa{
+    width: 550px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    }
+    
+    .anasayfa header{
+    color:rgb(139, 139, 218);
+    font-size: 22px;
+    font-weight: 500;
+    padding: 16px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #bfbfbf ;
+    margin-left: 190px;
+    margin-right: 190px;
 
-body{
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-}
-
-.anasayfa{
-width: 550px;
-border-radius: 40px;
-background-color: #ffffff;
-}
-
-.anasayfa header{
-color:rgb(139, 139, 218);
-font-size: 22px;
-font-weight: 500;
-padding: 16px 15px;
-display: flex;
-align-items: center;
-border-bottom: 1px solid #bfbfbf ;
-}
-
-.anasayfa .input-part{
-margin: 20px 25px 30px;
-}
-
-.anasayfa .weather-part{
+    }
+    
+    .anasayfa .input-part{
+    margin: 20px 25px 30px;
+    margin-left: 190px;
+    margin-right: 190px;
+    
+    }
+    
+    .anasayfa .weather-part{
     margin: 30px 0 0 ;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
- 
-.header i{
+    }
+     
+    .header i{
     cursor: pointer;
     font-size: 25;
     margin-right: 7px;
- }
+    align-items: center;
 
-.input-part :where(input,button){
-width: 100px;
-height: 55px;
-border: none;
-outline: none;
-border-radius: 7px;
-}
+     }
+    
+    .input-part :where(input,button){
+    width: 100px;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    }
+    
+    .input-part input {
+    text-align: center;    
+    border: 2 px solid #bfbfbf;
+    margin-left: 35px;
+    }
+    
+    .input-part .bölen{
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.input-part input {
-text-align: center;    
-border: 2 px solid #bfbfbf;
-}
-
-.input-part .bölen{
-height: 1px;
-width: 100%;
-margin: 25px 0;
-background-color: #ccc;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.input-part button{
-color: #fff;
-width: 100%;
-background-color:rgb(139, 139, 218);
-cursor: pointer;
-font-size: 20px;
-border-radius:  9px;
-}
-
-.bölen::before{      
+    }
+    
+    .input-part button{
+    color: #fff;
+    width: 100%;
+    height: 55%;
+    background-color:rgb(139, 139, 218);
+    cursor: pointer;
+    font-size: 15px;
+    border-radius:  9px;
+    }
+    
+    .bölen::before{      
     content: "ya da";   
     background-color: #fff;
     color: #ccc;
     padding: 0 15px;
     font-size: 15 px;
-}
-
-.weather-part img{
-max-width: 440px;
-}
-
-.weather-part .temp{
-display: flex;
-font-size: 72;
-font-weight: 500;
-}
-
-.weather-part .temp .sayi{
-font-size: 45px;
-margin-bottom: 5px;
-
-}
-
-.weather-part .temp .drc{
-font-size: 20px;
-margin: 10px 5px 0 0;
-display: block;
-}
-
-.weather-part .Konum{
-margin-bottom: 30px;
-display: flex;
-font-size: 21px;
-align-items: center;
-margin-top: 30px ;
-}
-
-.weather-part .button-details{
-width: 100%;
-display: flex;
-align-items: center;
-border-top: 2px solid #bfbfbf;
-justify-content:space-between;
-}
+    }
     
-.weather-part .column{
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-margin-top: 10px;
-margin-bottom: 10px;
-
-}
-
-.column i{
-color: rgb(19, 18, 112);
-font-size: 40px;
-}
-
-.column.nem{
-border-left: 2px solid  #bfbfbf;
-color: #000000;
-}
-
-.details .temp, .nem span{
+    .weather-part img{
+    max-width: 440px;
+    }
+    
+    .weather-part .temp{
+    display: flex;
+    font-size: 72;
+    font-weight: 500;
+    }
+    
+    .weather-part .temp .sayi{
+    font-size: 45px;
+    margin-bottom: 5px;
+    }
+    
+    .weather-part .temp .drc{
+    font-size: 20px;
+    margin: 10px 5px 0 0;
+    display: block;
+    }
+    
+    .weather-part .Konum{
+    margin-bottom: 30px;
+    display: flex;
+    font-size: 21px;
+    align-items: center;
+    margin-top: 30px ;
+    }
+    
+    .weather-part .button-details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #bfbfbf;
+    justify-content:space-between;
+    }
+        
+    .weather-part .column{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+    
+    .column i{
+    color: rgb(19, 18, 112);
+    font-size: 40px;
+    }
+    
+    .column.nem{
+    border-left: 2px solid  #bfbfbf;
+    color: #000000;
+    }
+    
+    .details .temp, .nem {
     font-size: 20px;
     font-weight: 300;
-}
-
-.details .temp .drc{
+    }
+    
+    .details .temp .drc{
     margin: 0;
     font-size: 20px;
     padding: 0 2px 0 1px;
-    
-}
-.Konum i{
+        
+    }
+    .Konum i{
     font-size: 25;
     margin-right: 5;
-    }
+        }

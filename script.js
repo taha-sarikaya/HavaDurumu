@@ -39,8 +39,6 @@ function requestApi(şehir){
 }
 
 function fetchData(){
-    infoTxt.innerText = "Sonuçlar getiriliyor..."
-    infoTxt.classList.add("pending")
     fetch(api).then(response => response.json()).then(result => weatherDetails(result))
 }
 
@@ -50,40 +48,28 @@ function weatherDetails(info){
         infoTxt.classList.replace("pending", "error")
         infoTxt.innerText = `${inputField.value} şehri bulunamadı...`
     }else{
-        const şehir = info.ad
-        const ülke = info.sys.ülke
         const {description, id} = info.weather[0]
-        const {feelshissedilen_sıcaklık_like, nem, temp} = info.main
+        const {temp} = info.main
 
+        //hava durumuna göre gelmesi gereken resimler
         if(id==800){
-            wIcon.src = "güneşli.jpg"  //hava durumuna göre gelmesi gereken resimler
+            wIcon.src = "resimler/gunesli.jpg"
         }else if(id => 200 && id <= 299){
-            wIcon.src = "resimler/şimşek.jpg"
+            wIcon.src = "resimler/simsek.jpg"
         }else if(id => 600 && id <= 700){
             wIcon.src = "resimler/kar.jpg"
         }else if(id => 701 && id <= 800){
-            wIcon.src = "resimler/haze.svg"
+            wIcon.src = "resimler/sis.jpg"
         }else if(id => 801 && id <= 804){
-            wIcon.src = "bulutlu_yeni.jpg"
+            wIcon.src = "resimler/bulutlu_yeni.jpg"
         }else if(id => 300 && id <= 321 || (id => 500 && id <= 531)){
-            wIcon.src = "resimler/yagmur.jpg"
+            wIcon.src = "resimler/parcalıyagmur.jpg"
         }
         
-
         anasayfa.querySelector(".temp .sayi").innerText = Math.floor(temp)
-        anasayfa.querySelector(".weather").innerText = description
-        anasayfa.querySelector(".konum").innerText = `${şehir}, ${ülke}`
-        anasayfa.querySelector(".temp .sayi-2").innerText = Math.floor(hissedilen_sıcaklık)
-        anasayfa.querySelector(".nem span").innerText = `${nem}%`
-
-
-        infoTxt.classList.remove("pending", "error")
-        anasayfa.classList.add("active")
-
+        
     }
-    
 }
-
 arrowBack.addEventListener("click", () => {
     anasayfa.classList.remove("active")
 })
