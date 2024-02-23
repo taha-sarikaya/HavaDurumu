@@ -2,55 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link a href="secilensehir.html"
-    rel="stylesheet"
-    />
-    <title>Hava Durumu </title>                     
-    <link rel="stylesheet" href="style.css">                <!-- css ile bağlantı  -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- iconları aldığım site -->
+    <title>Hava Durumu Sorgulama</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body background="resimler/yy.jpg">
-  <div class="anasayfa">
-      <header> Hava Durumu</header>  
-      <section class="input-part">
-        <p class="info-txt" > Lütfen Şehir İsmi Giriniz</p>
-        <input type="text" placeholder="şehir" spellcheck="false">
-        <div class="bölen" ></div>
-        <button> <i class="bx bx-map"></i> Konuma Göre Bul </button> 
-      </section>
-      <!-- ikinci kısım -->
-      <section class="weather-part">
-        <img src="resimler/png-transparent-weather-forecasting-climate-weather-map-world-weather-map-infographic-text-cloud.png" alt="Hoşgeldiniz.." > <!-- sayfa açıldığında ilk çıkacak resim -->
-      <div class="temp">
-        <p>Bugün Hava</p>
-      </div>
-      
-        <div class="temp">
-        <span class="sayi"></span>
-        <span class="drc">°</span>C
+<body background="yy.jpg"> 
+    <div class="weather">
+        <div class="location"><h1 id="city"></h1></div>
+        <div class="info">
+            <h2 id="celsius"></h2>
+            <h3 id="result"></h3>
+        </div>
+        <div class="date"> <h4 id="date"></h4></div>
     </div>
     
-    <div class="Konum">
-         <span class="drc"><i class='bx bxs-like bx-sd'></i> </span>Web sayfamızı takip etmeyi unutmayınız.
-    </div>
-   <div class="button-details"> 
-      <div class="column hissedilen">
-        <i class="bx bxs-thermometer"></i> <!-- yukarıda belirttiğim gibi çeşitli iconlar için -->
-        <div class="details">
-          <p>Taha Sarıkaya Hava Durumu</p>
+    <div class="future"> 
+        <div  class="future-items"> 
+            <h1 id="one-text"class="celsius-text"></h1>
+            <h2 id="one-date"class="date-text"></h2>
+            <p id="one-weather"class="weather-text"></p>
         </div>
-   </div>
-   <div class ="column nem">
-     <i class="bx bxs-droplet-half"></i>
-      <div class="details">
-
-       <p>2024</p>
-      </div>
-     </div>
-   </div>
- </section>
-</div>
-<script src="script.js"> </script> <!-- bağlantı -->
+        <div  class="future-items">
+            <h1 id="two-text"class="celsius-text"></h1>
+            <h2 id="two-date"class="date-text"></h2>
+            <p id="two-weather"class="weather-text"></p>
+        </div>
+        <div class="future-items"> 
+            <h1 id="three-text"class="celsius-text"></h1>
+            <h2 id="three-date"class="date-text"></h2>
+            <p id="three-weather"class="weather-text"></p>
+        </div>
+        <div  class="future-items">
+            <h1 id="four-text"class="celsius-text"></h1>
+            <h2 id="four-date"class="date-text"></h2>
+            <p id="four-weather"class="weather-text"></p>
+        </div>
+    </div>
 </body>
 </html>
